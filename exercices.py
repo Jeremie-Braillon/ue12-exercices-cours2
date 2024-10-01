@@ -218,9 +218,7 @@ print(get_center(np.arange(1, 26).reshape(5, 5)))  # attendu: [[ 7  8  9]
 
 # %%
 def swap_first_rows(arr):
-    a=arr[0]
-    arr[0]=arr[1]
-    arr[1]=a
+    arr[0],arr[1]=arr[1].copy(),arr[0].copy()
     return arr
 
 
